@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pedromdev.appalunos.InfoAlunoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/TF_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_nome"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/R_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_nome"/>
+
+        <TextView
+            android:id="@+id/TF_matricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_matricula"
+            android:layout_below="@+id/R_nome"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_matricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_matricula" />
+
+        <TextView
+            android:id="@+id/TF_curso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_curso"
+            android:layout_below="@+id/R_matricula"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_curso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_curso" />
+
+        <TextView
+            android:id="@+id/TF_disciplina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_disciplina"
+            android:layout_below="@+id/R_curso"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_disciplina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_disciplina" />
+
+        <TextView
+            android:id="@+id/TF_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_telefone"
+            android:layout_below="@+id/R_disciplina"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_telefone" />
+
+        <TextView
+            android:id="@+id/TF_av1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_av1"
+            android:layout_below="@+id/R_telefone"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_av1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_av1"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:id="@+id/TF_av2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/lvl_info_av2"
+            android:layout_below="@+id/R_telefone"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_av2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_av2"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/TF_av3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_av3"
+            android:layout_below="@+id/R_telefone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_av3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TF_av3"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/TF_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_media"
+            android:layout_below="@+id/R_av1"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_media" />
+
+        <TextView
+            android:id="@+id/TF_situacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_situacao"
+            android:layout_below="@+id/R_media"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_situacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_situacao" />
+
+    </RelativeLayout>
+
+</ScrollView>

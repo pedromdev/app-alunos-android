@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/editar_aluno"
+        android:title="@string/mitem_acoes_aluno_editar" />
+    <item android:id="@+id/excluir_aluno"
+        android:title="@string/mitem_acoes_aluno_excluir" />
+</menu>

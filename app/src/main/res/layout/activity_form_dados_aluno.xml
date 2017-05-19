@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pedromdev.appalunos.FormDadosAlunoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtAluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:hint="Nome do aluno"
+            android:layout_below="@+id/txtAluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtMat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtNome"
+            android:layout_marginTop="5dp"
+            android:text="Matrícula:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edtMat"
+            android:hint="Matricula do aluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMat"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/txtCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtMat"
+            android:layout_marginTop="5dp"
+            android:text="Curso:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edtCurso"
+            android:hint="Curso do aluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCurso"/>
+
+        <TextView
+            android:id="@+id/txtDisc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtCurso"
+            android:layout_marginTop="5dp"
+            android:text="Disciplina:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edtDisc"
+            android:hint="Disciplina do aluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDisc"/>
+
+        <TextView
+            android:id="@+id/txtFone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtDisc"
+            android:layout_marginTop="5dp"
+            android:text="Telefone:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edtFone"
+            android:hint="Telefone do aluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFone"
+            android:inputType="phone"/>
+
+        <TextView
+            android:id="@+id/txtNotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtFone"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Notas:"
+            android:textStyle="bold"/>
+
+        <!-- AV's -->
+
+        <TextView
+            android:id="@+id/txtAV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNotas"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="AV1"/>
+
+        <EditText
+            android:id="@+id/edtAV1"
+            android:hint=""
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAV1"
+            android:layout_alignParentStart="true"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/txtAV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNotas"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="AV2"/>
+
+        <EditText
+            android:id="@+id/edtAV2"
+            android:hint=""
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAV2"
+            android:layout_centerInParent="true"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/txtAV3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNotas"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="19dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="AV3"/>
+
+        <EditText
+            android:id="@+id/edtAV3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAV3"
+            android:layout_alignParentEnd="true"
+            android:inputType="numberDecimal"/>
+
+        <!-- FIM AV's -->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtAV1"
+            android:text="Salvar"
+            android:id="@+id/btnCadastrar"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

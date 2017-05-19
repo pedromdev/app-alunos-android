@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">App Alunos</string>
+    <string name="mitem_principal_adicionar">Adicionar</string>
+    <string name="mitem_acoes_aluno_editar">Editar</string>
+    <string name="mitem_acoes_aluno_excluir">Excluir</string>
+    <string name="lbl_info_nome">Nome</string>
+    <string name="lbl_info_matricula">Matricula</string>
+    <string name="lbl_info_curso">Curso</string>
+    <string name="lbl_info_disciplina">Disciplina</string>
+    <string name="lbl_info_av1">AV1</string>
+    <string name="lvl_info_av2">AV2</string>
+    <string name="lbl_info_av3">AV3</string>
+    <string name="lbl_info_media">Média</string>
+    <string name="lbl_info_situacao">Situação</string>
+    <string name="lbl_info_telefone">Telefone</string>
+    <string name="lbl_menu_voltar">Voltar</string>
+</resources>
