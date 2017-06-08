@@ -1,7 +1,14 @@
 package com.example.pedromdev.appalunos;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,6 +20,11 @@ import com.example.pedromdev.appalunos.helper.FormularioHelper;
 import com.example.pedromdev.appalunos.modelo.bean.Aluno;
 import com.example.pedromdev.appalunos.modelo.dao.AlunoDAO;
 import com.example.pedromdev.appalunos.validator.AlunoValidator;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by pedromdev on 17/05/17.
@@ -28,6 +40,14 @@ public class FormDadosAlunoActivity extends AppCompatActivity {
 
     private Aluno alunoSelecionado = null;
 
+    private String localArquivo;
+
+    private String mCurrentPhotoPath;
+
+    private static final int FAZER_FOTO = 123;
+
+    private static final String TAG = "FORMDADOSALUNO_ACTIVITY";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +57,9 @@ public class FormDadosAlunoActivity extends AppCompatActivity {
         dao = new AlunoDAO(this);
         btnSalvar = (Button) findViewById(R.id.btnCadastrar);
 
-        Long matricula = getIntent().getLongExtra("matricula_aluno", 0L);
+        alunoSelecionado = (Aluno) getIntent().getSerializableExtra("ALUNO");
 
-        if (matricula > 0) {
-            alunoSelecionado = dao.recuperar(matricula);
+        if (alunoSelecionado != null) {
             helper.setDadosDoAluno(alunoSelecionado);
         }
 
@@ -76,6 +95,26 @@ public class FormDadosAlunoActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        helper.getFoto().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Log.i(TAG, "Abrindo camera");
+                    File file = createImageFile();
+                    Uri localFoto = FileProvider.getUriForFile(
+                        FormDadosAlunoActivity.this,
+                        getApplicationContext().getPackageName() + ".provider",
+                        file
+                    );
+                    Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    camera.putExtra(MediaStore.EXTRA_OUTPUT, localFoto);
+                    startActivityForResult(camera, FAZER_FOTO);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override
@@ -94,5 +133,47 @@ public class FormDadosAlunoActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case FAZER_FOTO:
+                Log.i(TAG, "Resultado da camera");
+                fazerFoto(resultCode);
+                break;
+        }
+    }
+
+    private void fazerFoto(int resultCode) {
+        if (resultCode == Activity.RESULT_OK) {
+            helper.carregaFoto(localArquivo);
+        } else {
+            localArquivo = null;
+        }
+    }
+
+    private File createImageFile() throws IOException {
+        // Create an image file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        Log.i(TAG, "Timestamp: " + timeStamp);
+        String imageFileName = "JPEG_" + timeStamp;
+        File storageDir = new File(
+            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
+            "Camera"
+        );
+        File image = File.createTempFile(
+            imageFileName,  /* prefix */
+            ".jpg",         /* suffix */
+            storageDir      /* directory */
+        );
+
+        Log.i(TAG, "Caminho da imagem: " + image.getAbsolutePath());
+
+        // Save a file: path for use with ACTION_VIEW intents
+        localArquivo = image.getAbsolutePath();
+        return image;
     }
 }

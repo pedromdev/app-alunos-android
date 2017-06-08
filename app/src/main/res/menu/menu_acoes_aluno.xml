@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:id="@+id/ligar_para_aluno"
+        android:title="@string/mitem_acoes_aluno_ligar" />
+
+    <item android:id="@+id/enviar_sms_aluno"
+        android:title="@string/mitem_acoes_aluno_enviar_sms" />
+
+    <item android:id="@+id/achar_no_mapa"
+        android:title="@string/mitem_acoes_aluno_achar_no_mapa" />
+
+    <item android:id="@+id/navegar_no_site"
+        android:title="@string/mitem_acoes_aluno_navegar_no_site" />
+
+    <item android:id="@+id/enviar_email"
+        android:title="@string/mitem_acoes_aluno_enviar_email" />
+
     <item android:id="@+id/editar_aluno"
         android:title="@string/mitem_acoes_aluno_editar" />
+
     <item android:id="@+id/excluir_aluno"
         android:title="@string/mitem_acoes_aluno_excluir" />
+
 </menu>

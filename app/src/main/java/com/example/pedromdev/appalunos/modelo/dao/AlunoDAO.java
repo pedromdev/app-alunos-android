@@ -19,7 +19,7 @@ import java.util.List;
 
 public class AlunoDAO extends SQLiteOpenHelper {
 
-    private static final int VERSAO = 1;
+    private static final int VERSAO = 5;
 
     private static final String TABELA = "Aluno";
 
@@ -39,6 +39,10 @@ public class AlunoDAO extends SQLiteOpenHelper {
                 + "curso TEXT,"
                 + "disciplina TEXT,"
                 + "telefone TEXT,"
+                + "endereco TEXT,"
+                + "site TEXT,"
+                + "email TEXT,"
+                + "foto TEXT,"
                 + "av1 REAL,"
                 + "av2 REAL,"
                 + "av3 REAL"
@@ -49,9 +53,7 @@ public class AlunoDAO extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE IF EXISTS " + TABELA;
-        db.execSQL(sql);
-        onCreate(db);
+
     }
 
     public void cadastrar(Aluno aluno) {
@@ -120,6 +122,10 @@ public class AlunoDAO extends SQLiteOpenHelper {
         aluno.setCurso(cursor.getString(cursor.getColumnIndex("curso")));
         aluno.setDisciplina(cursor.getString(cursor.getColumnIndex("disciplina")));
         aluno.setTelefone(cursor.getString(cursor.getColumnIndex("telefone")));
+        aluno.setEndereco(cursor.getString(cursor.getColumnIndex("endereco")));
+        aluno.setSite(cursor.getString(cursor.getColumnIndex("site")));
+        aluno.setEmail(cursor.getString(cursor.getColumnIndex("email")));
+        aluno.setFoto(cursor.getString(cursor.getColumnIndex("foto")));
         aluno.setAv1(cursor.getDouble(cursor.getColumnIndex("av1")));
         aluno.setAv2(cursor.getDouble(cursor.getColumnIndex("av2")));
         aluno.setAv3(cursor.getDouble(cursor.getColumnIndex("av3")));
@@ -141,6 +147,10 @@ public class AlunoDAO extends SQLiteOpenHelper {
         values.put("curso", aluno.getCurso());
         values.put("disciplina", aluno.getDisciplina());
         values.put("telefone", aluno.getTelefone());
+        values.put("endereco", aluno.getEndereco());
+        values.put("site", aluno.getSite());
+        values.put("email", aluno.getEmail());
+        values.put("foto", aluno.getFoto());
         values.put("av1", aluno.getAv1());
         values.put("av2", aluno.getAv2());
         values.put("av3", aluno.getAv3());

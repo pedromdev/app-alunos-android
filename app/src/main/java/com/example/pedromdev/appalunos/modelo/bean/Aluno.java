@@ -1,5 +1,6 @@
 package com.example.pedromdev.appalunos.modelo.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,7 +10,7 @@ import java.util.List;
  * Created by pedromdev on 18/05/17.
  */
 
-public class Aluno {
+public class Aluno implements Serializable {
 
     private Long matricula;
 
@@ -20,6 +21,14 @@ public class Aluno {
     private String disciplina;
 
     private String telefone;
+
+    private String endereco;
+
+    private String site;
+
+    private String email;
+
+    private String foto;
 
     private Double av1;
 
@@ -69,6 +78,42 @@ public class Aluno {
 
     public Aluno setTelefone(String telefone) {
         this.telefone = telefone;
+        return this;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public Aluno setEndereco(String endereco) {
+        this.endereco = endereco;
+        return this;
+    }
+
+    public String getSite() {
+        return site;
+    }
+
+    public Aluno setSite(String site) {
+        this.site = site;
+        return this;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Aluno setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public Aluno setFoto(String foto) {
+        this.foto = foto;
         return this;
     }
 

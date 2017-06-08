@@ -11,12 +11,20 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_avatar"/>
+
         <TextView
             android:id="@+id/TF_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/lbl_info_nome"
             android:textStyle="bold"
+            android:layout_below="@+id/foto"
             android:textSize="16sp"/>
 
         <TextView
@@ -90,11 +98,59 @@
             android:layout_below="@+id/TF_telefone" />
 
         <TextView
+            android:id="@+id/TF_endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_endereco"
+            android:layout_below="@+id/R_telefone"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_endereco" />
+
+        <TextView
+            android:id="@+id/TF_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_site"
+            android:layout_below="@+id/R_endereco"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_site" />
+
+        <TextView
+            android:id="@+id/TF_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_info_email"
+            android:layout_below="@+id/R_site"
+            android:layout_marginTop="@dimen/info_margin"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/R_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TF_email" />
+
+        <TextView
             android:id="@+id/TF_av1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/lbl_info_av1"
-            android:layout_below="@+id/R_telefone"
+            android:layout_below="@+id/R_email"
             android:layout_alignParentStart="true"
             android:layout_marginTop="@dimen/info_margin"
             android:textStyle="bold"
@@ -113,7 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/lvl_info_av2"
-            android:layout_below="@+id/R_telefone"
+            android:layout_below="@+id/R_email"
             android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/info_margin"
             android:textStyle="bold"
@@ -131,7 +187,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/lbl_info_av3"
-            android:layout_below="@+id/R_telefone"
+            android:layout_below="@+id/R_email"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="@dimen/info_margin"
             android:textStyle="bold"

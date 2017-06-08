@@ -17,11 +17,8 @@ public class InfoAlunoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_aluno);
 
-        Long matricula = getIntent().getLongExtra("matricula_aluno", 0L);
-        AlunoDAO dao = new AlunoDAO(this);
         InfoHelper helper = new InfoHelper(this);
-
-        Aluno aluno = dao.recuperar(matricula);
+        Aluno aluno = (Aluno) getIntent().getSerializableExtra("ALUNO");
         helper.setDadosDoAluno(aluno);
     }
 

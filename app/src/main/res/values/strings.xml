@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">App Alunos</string>
+    <string name="lbl_menu_voltar">Voltar</string>
+    <!-- Menu item lista -->
     <string name="mitem_principal_adicionar">Adicionar</string>
-    <string name="mitem_acoes_aluno_editar">Editar</string>
-    <string name="mitem_acoes_aluno_excluir">Excluir</string>
+    <string name="mitem_acoes_aluno_editar">Editar dados</string>
+    <string name="mitem_acoes_aluno_excluir">Excluir aluno</string>
+    <string name="mitem_acoes_aluno_ligar">Ligar</string>
+    <string name="mitem_acoes_aluno_enviar_sms">Enviar SMS</string>
+    <string name="mitem_acoes_aluno_achar_no_mapa">Achar no Mapa</string>
+    <string name="mitem_acoes_aluno_navegar_no_site">Navegar no Site</string>
+    <string name="mitem_acoes_aluno_enviar_email">Enviar E-mail</string>
+    <!-- FIM - Menu item lista -->
+    <!-- InfoAlunoActivity -->
     <string name="lbl_info_nome">Nome</string>
     <string name="lbl_info_matricula">Matricula</string>
     <string name="lbl_info_curso">Curso</string>
@@ -13,5 +22,31 @@
     <string name="lbl_info_media">Média</string>
     <string name="lbl_info_situacao">Situação</string>
     <string name="lbl_info_telefone">Telefone</string>
-    <string name="lbl_menu_voltar">Voltar</string>
+    <string name="lbl_info_endereco">Endereço</string>
+    <string name="lbl_info_site">Site</string>
+    <string name="lbl_info_email">E-mail</string>
+    <!-- FIM - InfoAlunoActivity -->
+    <!-- FormDadosAlunoActivity -->
+    <string name="lbl_form_nome">Nome:</string>
+    <string name="edt_form_aluno">Nome do aluno</string>
+    <string name="lbl_form_matricula">Matrícula:</string>
+    <string name="edt_form_matricula">Matricula do aluno</string>
+    <string name="lbl_form_curso">Curso:</string>
+    <string name="edt_form_curso">Curso do aluno</string>
+    <string name="lbl_form_disciplina">Disciplina:</string>
+    <string name="edt_form_disciplina">Disciplina do aluno</string>
+    <string name="lbl_form_telefone">Telefone:</string>
+    <string name="edt_form_telefone">Telefone do aluno</string>
+    <string name="lbl_form_endereco">Endereço:</string>
+    <string name="edt_form_endereco">Endereço do aluno</string>
+    <string name="lbl_form_site">Site:</string>
+    <string name="edt_form_site">Site do aluno</string>
+    <string name="lbl_form_email">E-mail:</string>
+    <string name="edt_form_email">E-mail do aluno</string>
+    <string name="lbl_form_notas">Notas:</string>
+    <string name="lbl_form_av1">AV1</string>
+    <string name="lbl_form_av2">AV2</string>
+    <string name="lbl_form_av3">AV3</string>
+    <string name="btn_form_salvar">Salvar</string>
+    <!-- FIM - FormDadosAlunoActivity -->
 </resources>
